@@ -233,6 +233,10 @@ public final class Manager {
         if (toast != null) {
             toast.cancel();
         }
+		else //utvidet ØR 22.09.2020 - for å slette nots som ikke er laget av oss selv
+        {
+            NotificationManagerCompat.from(context).cancel(id);
+        }
 
         return toast;
     }
